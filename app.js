@@ -45,9 +45,9 @@ bottomDropdown.addEventListener('change', () => {
     // get the value of the bottom dropdown
     const bottomSelect = bottomDropdown.value;
     // increment the bottom change count state
-    
+    bottomCount++;
     // update the dom for the bottom (NOTE use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
-
+    bottomEl.style.backgroundImage = `url(./assets/${bottomSelect}-pants.png)`;
     // update the stats to show the new count (call displayStats() to do this work)
 });
 
