@@ -27,6 +27,8 @@ headDropdown.addEventListener('change', () => {
     // update the dom for the head (use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
     headEl.style.backgroundImage = `url(./assets/${headSelect}-head.png)`;
     // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
+
 });
 
 
@@ -38,6 +40,7 @@ middleDropdown.addEventListener('change', () => {
     // update the dom for the middle (NOTE: use style.backgroundImage on the middleEl div instead of trying to set the .src -- it's NOT an img tag!)
     middleEl.style.backgroundImage = `url(./assets/${middleSelect}-middle.png)`;
     // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
 });
 
 
@@ -49,6 +52,8 @@ bottomDropdown.addEventListener('change', () => {
     // update the dom for the bottom (NOTE use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
     bottomEl.style.backgroundImage = `url(./assets/${bottomSelect}-pants.png)`;
     // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
+
 });
 
 catchphraseButton.addEventListener('click', () => {
@@ -60,7 +65,6 @@ catchphraseButton.addEventListener('click', () => {
 
     // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
     displayCatchphrases();
-    catchPhrasesInputEl.value = '';
 });
 
 function displayStats() {
@@ -73,10 +77,10 @@ function displayCatchphrases() {
     // clear out the DOM for the currently displayed catchphrases
     catchphrasesEl.textContent = '';
     // loop through each catchphrase in state
-    for (let catchPhrases of getcatchPhrases){
+    for (let catchPhrase of catchPhrases){
         const div = document.createElement('div');
         div.classList.add('catchphrase');
-        div.textContent = catchPhrases;
+        div.textContent = catchPhrase;
 
         catchphrasesEl.append(div);
     }
