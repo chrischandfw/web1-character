@@ -55,7 +55,7 @@ catchphraseButton.addEventListener('click', () => {
     // get the value of the catchphrase input
     const getcatchPhrases = catchphraseInput.value;
     // push the new catchphrase to the catchphrase array in state
-    getcatchPhrases.push('');
+    catchPhrases.push(getcatchPhrases);
     // clear out the form input's value so it's empty to the user
 
     // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
@@ -73,7 +73,7 @@ function displayCatchphrases() {
     // clear out the DOM for the currently displayed catchphrases
     catchphrasesEl.textContent = '';
     // loop through each catchphrase in state
-    for (let catchPhrases of getcatchPhrase){
+    for (let catchPhrases of getcatchPhrases){
         const div = document.createElement('div');
         div.classList.add('catchphrase');
         div.textContent = catchPhrases;
