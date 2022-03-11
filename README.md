@@ -31,3 +31,13 @@ User [this repository](https://github.com/alchemycodelab/half-baked-web-01-chara
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --: |
 | IMPURE: `displayStats() : mutates the DOM to display a string describing the counts.` |   1 |
 | IMPURE: `displayCatchphrases() : clears out the old list from the DOM, loops through catchphrases, renders and appends to the list element`                                                                                                                                                          |   2 |
+
+![wireframe](/assets/characterWireframe.png "wireframe for character site")
+
+##HTML Plan
+- 3 div tags to house the head, middle, and bottom images, located on the right of page
+- 3 dropdown buttons, one for each type of image
+- comment box and button
+- display comments after user click button
+- p tag for displaying text that tracks number of times each type of image is selected
+
